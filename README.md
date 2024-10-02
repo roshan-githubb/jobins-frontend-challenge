@@ -1,5 +1,3 @@
-# JoBins Frontend Challenge
-
 ## To Run
 - npm install
 - npm run dev
