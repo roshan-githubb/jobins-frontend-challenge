@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  border-radius: 16px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl bg-white
+  }
+}
+
+.sidebar-component.collapsed {
+  @apply min-w-[57px]
+}
+
+
+.sidebar-component.expanded {
+  @apply w-[300px]
+}
+
+
+
+.sidebar-menu-title {
+  padding: 15px 30px 15px 30px;
+}
+
+.sidebar-menu-list-expand {
+  margin: auto 14px;
+  padding: 9px 16px 9px 16px;
+  @apply gap-2
+}
+
+.sidebar-menu-list-collapse {
+  margin: auto 8px;
+  padding: 6px 8px 6px 8px;
+  @apply gap-0
+}
+
+.sidebar-header-wrapper-expand {
+  padding: 20px 14px 20px 18px;
+}
+
+.sidebar-header-wrapper-collapse {
+  padding: 20px 14px 20px 18px;
+}
+
+
+.header-wrapper {
+  height: 62px;
+  padding: 12px 0px 12px 0px;
+  @apply flex justify-between items-center
+}
+
+.header-title {
+  @apply font-bold text-md sm:text-xl transition-all
+}
+
+.notification-icon {
+  @apply hidden md:inline-block
+}
+
+
+.main-section-wrapper {
+  @apply bg-background w-full px-6 py-2 overflow-x-auto
+}
+
+
+.dashboard-card-wrapper {
+  padding: 34px;
+}
+
+.dashboard-content-anims {
+  animation: dashboard-items-anim 0.2s normal forwards ease-in-out;
+}
+
+
+
+@keyframes dashboard-items-anim {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+
+.sidebar-component {
+  @apply max-w-[260px] h-screen min-w-[52px]
+}
+
+
+@media(prefers-reduced-motion) {
+  .dashboard-content-anims {
+    transition: none;
+  }
+}
