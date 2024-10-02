@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { _tableHeaders } from "../../../pages/dashboard/constants";
-import  Table  from "../../../shared/Table";
-import { TableColumn } from "../../../shared/Table";
-import { DashboardContext } from "../Store/Store";
-import TableFilters from "./TableFilters";
+import { _tableHeaders } from "../../../pages/dashboard/constants"; // Assuming you have your headers here
+import Table from "../../../shared/Table"; // Assuming a reusable table component
+import { TableColumn } from "../../../shared/Table"; // Column wrapper component
+import { DashboardContext } from "../Store/Store"; // Importing the context for state management
+import TableFilters from "./TableFilters"; // Component for filters
 
 const OrdersList = function OrdersList() {
   const {
@@ -76,4 +76,3 @@ const NoDataFound = () => {
 };
 
 export default OrdersList;
-
